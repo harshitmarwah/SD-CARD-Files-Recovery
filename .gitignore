@@ -1,0 +1,17 @@
+# Recovery output: holds personal photos and full card images - never commit it
+recovered/
+recovered_*/
+*.img
+*.img.part
+report.csv
+summary.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# OS and editors
+.DS_Store
+._*
+.idea/
+.vscode/
