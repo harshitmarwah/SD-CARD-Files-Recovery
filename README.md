@@ -254,13 +254,9 @@ Exit codes: `0` finished, `1` error or stopped with Ctrl-C, `2` invalid argument
 
 ## Engineering notes
 
-The lessons from building this tool are written up as a Claude skill in [`Skills-Literature-AI/sd-card-recovery-engineering`](Skills-Literature-AI/sd-card-recovery-engineering). It covers the on-disk formats, the robustness rules that keep it from crashing, hanging or writing to the card, and how each was tested, including a generator for damaged test images. `Skills-Literature-AI` is a git submodule, so clone with:
+The lessons from building this tool are written up as a Claude skill in [`sd-card-recovery-engineering/`](sd-card-recovery-engineering). It covers the on-disk formats, the robustness rules that keep it from crashing, hanging or writing to the card, and how each was tested, including a generator for damaged test images (`scripts/torture_images.py`). The folder isn't needed to run `sd_recover.py`.
 
-```bash
-git clone --recurse-submodules https://github.com/harshitmarwah/SD-CARD-Files-Recovery.git
-```
-
-If you've already cloned the repository, run `git submodule update --init` instead. The submodule isn't needed to run `sd_recover.py`.
+It is a copy of the skill as published in [Skills-Literature-AI at commit f025d85](https://github.com/harshitmarwah/Skills-Literature-AI/tree/f025d85e79518baab16183a676809d32e85ecbb0/sd-card-recovery-engineering).
 
 ---
 
