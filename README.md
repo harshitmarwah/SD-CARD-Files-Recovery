@@ -22,6 +22,7 @@ sudo python3 sd_recover.py
 - [Limitations](#limitations)
 - [FAQ](#faq)
 - [Troubleshooting](#troubleshooting)
+- [Engineering notes](#engineering-notes)
 - [License and disclaimer](#license-and-disclaimer)
 
 ---
@@ -248,6 +249,18 @@ You do. The program hands everything it created back to your account at the end,
 | Only `carving` results, no `filesystem` results | The card was formatted or its folders are damaged. Carved files are named by position. |
 
 Exit codes: `0` finished, `1` error or stopped with Ctrl-C, `2` invalid arguments.
+
+---
+
+## Engineering notes
+
+The lessons from building this tool are written up as a Claude skill in [`Skills-Literature-AI/sd-card-recovery-engineering`](Skills-Literature-AI/sd-card-recovery-engineering). It covers the on-disk formats, the robustness rules that keep it from crashing, hanging or writing to the card, and how each was tested, including a generator for damaged test images. `Skills-Literature-AI` is a git submodule, so clone with:
+
+```bash
+git clone --recurse-submodules https://github.com/harshitmarwah/SD-CARD-Files-Recovery.git
+```
+
+If you've already cloned the repository, run `git submodule update --init` instead. The submodule isn't needed to run `sd_recover.py`.
 
 ---
 
